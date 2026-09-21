@@ -1,0 +1,19 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><c:if test="${not empty pageTitle}">${pageTitle} &middot; </c:if>Training Depot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="${ctx}/css/tokens.css">
+<link rel="stylesheet" href="${ctx}/css/base.css">
+<link rel="stylesheet" href="${ctx}/css/grid.css">
+<link rel="stylesheet" href="${ctx}/css/components.css">
+<link rel="stylesheet" href="${ctx}/css/transitions.css">
+</head>
+<body>

@@ -1,0 +1,29 @@
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+  <footer class="depot-footer" data-grid-id="footer">
+    <div class="page-shell section">
+      <div class="title-block">
+        <div class="title-block__cell">
+          <span class="title-block__label">Depot No.</span>
+          <span class="title-block__value">TD-001</span>
+        </div>
+        <div class="title-block__cell">
+          <span class="title-block__label">Established</span>
+          <span class="title-block__value">2026</span>
+        </div>
+        <div class="title-block__cell">
+          <span class="title-block__label">Scope</span>
+          <span class="title-block__value">In-house equipment line</span>
+        </div>
+        <div class="title-block__cell">
+          <span class="title-block__label">Access</span>
+          <span class="title-block__value">
+            <a href="${ctx}/equipment">Equipment index</a>
+          </span>
+        </div>
+      </div>
+      <p class="eyebrow" style="margin-top: var(--space-4);">Training Depot &mdash; equipment archive &amp; fitness supply. Not a marketplace: every record on the floor is our own line.</p>
+    </div>
+  </footer>
+  <script src="${ctx}/js/grid-transition.js"></script>
+</body>
+</html>

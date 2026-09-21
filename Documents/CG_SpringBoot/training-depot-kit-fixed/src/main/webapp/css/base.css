@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--depot-bg);
+  color: var(--depot-ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.55;
+  /* A faint fixed grid of dots - graph-paper texture, not decoration for its own
+     sake: it reinforces the "workshop planning sheet" the whole layout is built on. */
+  background-image:
+    radial-gradient(circle, rgba(30, 26, 20, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0 0 var(--space-3) 0;
+  color: var(--depot-graphite-dark);
+}
+
+h1 { font-size: clamp(28px, 4vw, 44px); }
+h2 { font-size: clamp(22px, 3vw, 30px); }
+h3 { font-size: 19px; }
+h4 { font-size: 15px; }
+
+p {
+  margin: 0 0 var(--space-3) 0;
+  max-width: 62ch;
+}
+
+a {
+  color: var(--depot-graphite-dark);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--depot-mark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+::selection {
+  background: var(--depot-mark-tint);
+  color: var(--depot-ink);
+}
+
+/* --- Small technical/data text - record numbers, spec values, prices --- */
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--depot-graphite);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.page-shell {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--grid-margin);
+}
+
+.section {
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-7);
+}
+
+.visually-hidden-form-marker {
+  display: none;
+}

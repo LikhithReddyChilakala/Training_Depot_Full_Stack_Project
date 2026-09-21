@@ -1,0 +1,79 @@
+/*
+  Training Depot design tokens.
+  One warm, grayscale-leaning material palette plus a single accent
+  ("mark" - a grease-pencil/hazard-marker orange used only for calls to
+  action, availability, and active states). Everything else in the CSS
+  system is built from these variables so the look stays centralized.
+*/
+
+:root {
+  /* --- Surfaces (concrete/paper/panel/metal, light to dark) --- */
+  --depot-bg: #EAE6DC;
+  --depot-paper: #E2DCCB;
+  --depot-panel: #D8D1BE;
+  --depot-panel-raised: #E8E2D2;
+  --depot-line: #AFA691;
+  --depot-line-strong: #8F8570;
+
+  /* --- Ink --- */
+  --depot-graphite: #5C5546;
+  --depot-graphite-dark: #37332A;
+  --depot-ink: #1E1B15;
+
+  /* --- The one accent --- */
+  --depot-mark: #AE4420;
+  --depot-mark-dim: #883620;
+  --depot-mark-tint: #E6C9B4;
+
+  /* --- Status (kept desaturated - shape/label carries the meaning, not color alone) --- */
+  --depot-status-out: #7A7264;
+
+  /* --- Shadow base (rgb triplet, used inside rgba()) --- */
+  --shadow-rgb: 30, 26, 20;
+
+  /* --- Type --- */
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* --- Spacing scale --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* --- Radius: mostly sharp/drafted, one pill exception for tags/bins --- */
+  --radius-sharp: 2px;
+  --radius-pill: 999px;
+
+  /* --- Depth tiers --- */
+  --shadow-slight: 2px 2px 0 0 var(--depot-line), 0 2px 6px rgba(var(--shadow-rgb), 0.10);
+  --shadow-strong: 4px 4px 0 0 var(--depot-graphite), 0 8px 20px rgba(var(--shadow-rgb), 0.20);
+  --shadow-strong-hover: 5px 5px 0 0 var(--depot-graphite), 0 10px 24px rgba(var(--shadow-rgb), 0.24);
+
+  /* --- Layout --- */
+  --container-max: 1280px;
+  --grid-gap: 20px;
+  --grid-margin: 32px;
+
+  /* --- Motion --- */
+  --ease-depot: cubic-bezier(0.22, 0.68, 0.18, 1);
+  --duration-grid: 280ms;
+  --duration-fade: 180ms;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --grid-margin: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --grid-gap: 14px;
+    --grid-margin: 16px;
+  }
+}
